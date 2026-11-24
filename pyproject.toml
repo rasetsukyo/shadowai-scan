@@ -1,0 +1,35 @@
+[build-system]
+requires = ["setuptools>=64"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "shadowai-scan"
+version = "0.1.0"
+description = "Zero-dependency workstation and repository Shadow AI discovery and governance auditor mapped to NIST AI RMF, ISO 42001, and the EU AI Act"
+readme = "README.md"
+requires-python = ">=3.10"
+license = {text = "MIT"}
+authors = [
+    {name = "rasetsukyo"}
+]
+keywords = ["shadow-ai", "ai-governance", "nist-ai-rmf", "iso-42001", "eu-ai-act", "devsecops", "security-audit"]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Environment :: Console",
+    "Intended Audience :: Developers",
+    "Intended Audience :: Information Technology",
+    "Intended Audience :: System Administrators",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Topic :: Security",
+]
+
+[project.urls]
+Homepage = "https://github.com/rasetsukyo/shadowai-scan"
+"Pro Pack (PDF/DOCX, CSV Inventory & Policy Templates)" = "https://rasetsukyo.gumroad.com/l/shadowaiscan"
+
+[project.scripts]
+shadowai-scan = "shadowai_scan.__main__:main"
+
+[tool.setuptools.packages.find]
+include = ["shadowai_scan*"]
